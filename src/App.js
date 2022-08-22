@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Rockect from './components/pages/Rockect';
 import Missions from './components/pages/Missions';
@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route path='/' element={<Rockect />} />
-        <Route path='/missions' element={<Missions />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path="/" element={<Rockect />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );

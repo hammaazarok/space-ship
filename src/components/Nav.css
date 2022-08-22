@@ -1,27 +1,27 @@
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 2rem;  
+  padding: 2rem;
 }
 
-.logo{
+.logo {
   width: 75px;
   height: 75px;
 }
 
-.left-nav{
+.left-nav {
   display: flex;
   gap: 0.5rem;
 }
 
-.right-nav{
+.right-nav {
   display: flex;
- justify-content: space-between;
- gap: 1rem;
- margin-top: 0.5rem;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.right-nav li{
+.right-nav li {
   list-style: none;
 }

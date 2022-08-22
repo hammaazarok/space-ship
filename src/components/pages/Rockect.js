@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Rockect = () => {
-  return (
-    <div>Rockect</div>
-  )
-}
+const Rockect = () => (
+  <div>Rockect</div>
+);
 
-export default Rockect
+export default Rockect;
