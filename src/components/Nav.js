@@ -1,6 +1,7 @@
 import React from 'react'
-import {NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import space from '../assets/images/planet.png';
+import './Nav.css';
 
 
 const links = [
@@ -24,10 +25,12 @@ const links = [
 
 const Nav = () => {
   return (
-    <div>
-      <img src={space} alt='space image' />
+    <div className='nav'>
+      <div className='left-nav'>
+      <img className='logo' src={space} alt='space' />
       <h1>Space Traveler's Hub</h1>
-      <ul>
+     </div>
+      <ul className='right-nav'>
         {links.map((link) => (
           <li key={link.id}>
             <NavLink to={link.path}

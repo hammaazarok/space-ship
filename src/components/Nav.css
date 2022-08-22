@@ -1,0 +1,27 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 2rem;  
+}
+
+.logo{
+  width: 75px;
+  height: 75px;
+}
+
+.left-nav{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.right-nav{
+  display: flex;
+ justify-content: space-between;
+ gap: 1rem;
+ margin-top: 0.5rem;
+}
+
+.right-nav li{
+  list-style: none;
+}
