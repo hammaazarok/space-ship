@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-
-import ActionTypes from '../ActionTypes';
+import ActionTypes from '../missions/ActionTypes';
 
 const initialState = {
   rocket: {
