@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import RockectDisplay from './RockectDisplay';
+import setRockect from '../../redux/rockets/RockectAction';
 
 const Rockect = () => {
   const rockects = useSelector((state) => state.rockects);
@@ -12,13 +13,13 @@ const Rockect = () => {
       .catch((err) => {
         console.log('Err', err);
       });
-    console.log(response.data);
+    dispatch(setRockect(response.data));
   };
 
   useEffect(() => {
     fetchRockects();
   }, []);
-  console.log(rockects);
+  console.log('rockects:', rockects);
 
   return (
     <div>
