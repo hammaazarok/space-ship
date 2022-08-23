@@ -8,6 +8,7 @@ import Profile from './components/pages/Profile';
 function App() {
   return (
     <div className="App">
+      <h1>This is rockect</h1>
       <Nav />
       <Routes>
         <Route path="/" element={<Rockect />} />
