@@ -16,6 +16,7 @@ const RockectDisplay = () => {
         <p>
           {rockect.description}
         </p>
+        <button type="button">Reserved</button>
       </div>
     </div>
   ));

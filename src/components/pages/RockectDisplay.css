@@ -14,3 +14,12 @@
   line-height: 1;
   margin-left: 2rem;
 }
+
+.main button{
+  background-color: rgb(17, 116, 255);
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0.3rem;
+}
