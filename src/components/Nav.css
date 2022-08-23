@@ -1,31 +1,44 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .logo {
-  width: 75px;
-  height: 75px;
+  width: 10vw;
+  height: 10vw;
+  padding-right: 1vw;
 }
 
 .left-nav {
   display: flex;
-  gap: 0.5rem;
+  align-items: center
+}
+
+.left-nav h1{
+  font-size: 2.5vw;
+  font-weight: bolder;
+  color: gray;
 }
 
 .right-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-top: 0.5rem;
 }
 
-.right-nav li {
-  list-style: none;
+/* .nav:nth-child(4) {
+  border-left: 2px solid grey;
+} */
+
+.right-nav  a {
+  text-decoration: none;
+  font-size: 2vw;
 }
 
-.active {
+.active-nav {
+  color: #00d7c6;
   text-decoration: underline;
 }

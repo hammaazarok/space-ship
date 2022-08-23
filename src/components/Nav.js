@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import space from '../assets/images/planet.png';
+import space from '../assets/images/planet2.png';
 import './Nav.css';
 
 const links = [
@@ -28,20 +28,17 @@ const Nav = () => (
       <img className="logo" src={space} alt="space" />
       <h1>Space Traveler&apos;s Hub</h1>
     </div>
-    <ul className="right-nav">
+    <div className="right-nav">
       {links.map((link) => (
-        <li key={link.id}>
-          <NavLink
-            to={link.path}
-            style={({ isActive }) => ({
-              textDecoration: isActive ? 'underline' : null,
-            })}
-          >
-            {link.text}
-          </NavLink>
-        </li>
+        <NavLink
+          className={(navlink) => (navlink.isActive ? 'active-nav' : '')}
+          to={link.path}
+          key={link.id}
+        >
+          {link.text}
+        </NavLink>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
