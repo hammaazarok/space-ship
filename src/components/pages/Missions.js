@@ -49,16 +49,24 @@ const Missions = () => {
           <tr key={m.mission_id}>
             <td><strong>{m.mission_name}</strong></td>
             <td>{m.description}</td>
-            <td>
+            <td className="td-button">
               <h5>
+                {m.isMember && (
+                <Badge bg="info">Active Member</Badge>
+                )}
+                {!m.isMember && (
                 <Badge bg="secondary">NOT A MEMBER</Badge>
+                )}
+
               </h5>
             </td>
-            <td>
-              <Button variant="outline-secondary" onClick={() => toggleMember(m.mission_id)}>Join Mission</Button>
-              <p>
-                {m.isMember ? 'true' : 'false'}
-              </p>
+            <td className="td-button">
+              {m.isMember && (
+              <Button variant="outline-danger" onClick={() => toggleMember(m.mission_id)}>Leave Mission</Button>
+              )}
+              {!m.isMember && (
+                <Button variant="outline-secondary" onClick={() => toggleMember(m.mission_id)}>Join Mission</Button>
+              )}
             </td>
           </tr>
         ))}
