@@ -1,21 +1,21 @@
-.main{
-  display:flex;
-  padding:2rem 4rem 1rem 4rem;
+.main {
+  display: flex;
+  padding: 2rem 4rem 1rem 4rem;
   justify-content: flex-start;
 }
 
-.main img{
+.main img {
   width: 12rem;
   height: 10rem;
 }
 
-.rocketDescription{
+.rocketDescription {
   text-align: left;
   line-height: 1;
   margin-left: 2rem;
 }
 
-.main button{
+.main button {
   background-color: rgb(17, 116, 255);
   padding: 0.5rem 1rem;
   outline: none;
