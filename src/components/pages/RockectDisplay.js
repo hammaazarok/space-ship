@@ -1,27 +1,29 @@
 /* eslint-disable camelcase */
-// import { useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import './RockectDisplay.css';
 
 const RockectDisplay = () => {
-  // const rockects = useSelector((state) => state.rockects);
+  const rockects = useSelector((state) => state.rockects);
 
-  // const renderRockect = rockects.map((rockect) => (
-  //   <div key={rockect.id}>
-  //     <div>
-  //       <img src={rockect.flickr_images} alt={rockect.rocket_name} />
-  //     </div>
-  //     <div>
-  //       <h1>{rockect.rocket_name}</h1>
-  //       <h2>{rockect.rocket_type}</h2>
-  //       <p>
-  //         {rockect.description}
-  //       </p>
-  //     </div>
-  //   </div>
-  // ));
+  const renderRockect = rockects.map((rockect) => (
+    <div key={rockect.id} className="main">
+      <div className="rocketImage">
+        <img src={rockect.flickr_images} alt={rockect.rocket_name} />
+      </div>
+      <div className="rocketDescription">
+        <h1>{rockect.rocket_name}</h1>
+        <p>
+          {rockect.description}
+        </p>
+        <button type="button">Reserved</button>
+      </div>
+    </div>
+  ));
 
-  // return (
-  //   <>{ renderRockect }</>
-  // );
+  return (
+    <>{ renderRockect }</>
+  );
 };
 
 export default RockectDisplay;
