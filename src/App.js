@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Rockect from './components/pages/Rockect';
@@ -8,7 +9,6 @@ import Profile from './components/pages/Profile';
 function App() {
   return (
     <div className="App">
-      <h1>This is rockect</h1>
       <Nav />
       <Routes>
         <Route path="/" element={<Rockect />} />
