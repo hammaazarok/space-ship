@@ -12,7 +12,7 @@ const initialState = {
   error: null,
 };
   // Reducer
-export default function missonsReducer(state = initialState, action = {}) {
+export default function missionsReducer(state = initialState, action = {}) {
   const { value } = action;
   switch (action.type) {
     case START:
