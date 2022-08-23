@@ -1,4 +1,6 @@
+import './Missions.css';
 import React, { useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { LoadMessions } from '../../redux/missions/missions';
 
@@ -27,9 +29,26 @@ const Missions = () => {
 
   console.log(error, loading, Missions);
   return (
-    <div>
-      Missions
-    </div>
+    <Table striped bordered hover size="sm" className="missions-table">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        { Missions.map((m) => (
+          <tr key={m.mission_id}>
+            <td>{m.mission_name}</td>
+            <td>{m.description}</td>
+            <td>{m.mission_name}</td>
+            <td>{m.mission_name}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   );
 };
 
