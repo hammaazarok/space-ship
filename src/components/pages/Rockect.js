@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Rockect = () => {
-  const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
+  const rockects = useSelector((state) => state.rockects);
+  console.log(rockects);
   return (
     <div>Rockect</div>
   );
