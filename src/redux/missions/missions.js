@@ -1,14 +1,11 @@
 // Actions
 const START = 'space-ship/missions/START_LOADING_MISSIONS';
 const LOAD = 'space-ship/missions/LOAD_MISSIONS';
-const ADD_MEMBER = 'space-ship/missions/ADD_MEMBER';
-const REMOVE_MEMBER = 'space-ship/missions/REMOVE_MEMBER';
+const ADD_REMOVE_MEMBER = 'space-ship/missions/ADDREMOVE_MEMBER';
 
 const initialState = {
-  missions: [{
-    mission_id: 0, mission_name: 'appolo', description: 'fisrt trip landed on the moon', isMember: false,
-  }],
-  loading: false,
+  missions: [],
+  loading: true,
   error: null,
 };
   // Reducer
@@ -28,20 +25,16 @@ export default function missionsReducer(state = initialState, action = {}) {
         error: value.error,
         missions: value,
       };
-    case ADD_MEMBER:
+    case ADD_REMOVE_MEMBER:
       return {
         ...state,
         loading: false,
         error: value.error,
-        items: [...state.items, value],
-      };
-
-    case REMOVE_MEMBER:
-      return {
-        ...state,
-        loading: false,
-        error: value.error,
-        items: [...state.items, value],
+        missions: state.missions.map((mission) => {
+          const prevValue = mission.isMember;
+          if (mission.mission_id !== value) return mission;
+          return { ...mission, isMember: !prevValue };
+        }),
       };
 
     default:
@@ -59,10 +52,6 @@ export function LoadMessions(result) {
   return { type: LOAD, value: result };
 }
 
-export function addMembertoMission(result) {
-  return { type: ADD_MEMBER, value: result };
-}
-
-export function removeMembertoMission(result) {
-  return { type: REMOVE_MEMBER, value: result };
+export function addremoveMembertoMission(result) {
+  return { type: ADD_REMOVE_MEMBER, value: result };
 }
