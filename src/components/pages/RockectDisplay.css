@@ -1,0 +1,16 @@
+.main{
+  display:flex;
+  padding:2rem 4rem 1rem 4rem;
+  justify-content: flex-start;
+}
+
+.main img{
+  width: 12rem;
+  height: 10rem;
+}
+
+.rocketDescription{
+  text-align: left;
+  line-height: 1;
+  margin-left: 2rem;
+}
