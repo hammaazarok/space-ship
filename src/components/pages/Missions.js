@@ -1,8 +1,10 @@
 import './Missions.css';
 import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import { useDispatch, useSelector } from 'react-redux';
-import { LoadMessions } from '../../redux/missions/missions';
+import { addremoveMembertoMission, LoadMessions } from '../../redux/missions/missions';
 
 const Missions = () => {
   const fetchMissions = async () => {
@@ -28,12 +30,16 @@ const Missions = () => {
   const Missions = missions;
 
   console.log(error, loading, Missions);
+  const toggleMember = (id) => {
+    console.log(id);
+    dispatch(addremoveMembertoMission(id));
+  };
   return (
-    <Table striped bordered hover size="sm" className="missions-table">
+    <Table striped bordered hover size="sm" className="missions-table ml-5">
       <thead>
         <tr>
           <th>Mission</th>
-          <th>Description</th>
+          <th className="desc">Description</th>
           <th>Status</th>
           <th> </th>
         </tr>
@@ -41,10 +47,19 @@ const Missions = () => {
       <tbody>
         { Missions.map((m) => (
           <tr key={m.mission_id}>
-            <td>{m.mission_name}</td>
+            <td><strong>{m.mission_name}</strong></td>
             <td>{m.description}</td>
-            <td>{m.mission_name}</td>
-            <td>{m.mission_name}</td>
+            <td>
+              <h5>
+                <Badge bg="secondary">NOT A MEMBER</Badge>
+              </h5>
+            </td>
+            <td>
+              <Button variant="outline-secondary" onClick={() => toggleMember(m.mission_id)}>Join Mission</Button>
+              <p>
+                {m.isMember ? 'true' : 'false'}
+              </p>
+            </td>
           </tr>
         ))}
       </tbody>
