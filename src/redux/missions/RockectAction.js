@@ -1,7 +1,7 @@
-const RockectActions = {
-  SET_ROCKECTS: 'SET_ROCKETS',
-  RESERVED_ROCKET: 'RESERVED_ROCKECTS',
-  CANCEL_RESERVED_ROCKECT: 'CANCEL_RESERVED_ROCKECT',
-};
+import ActionTypes from './ActionTypes';
 
-export default RockectActions;
+const setRockect = (rockects) => ({
+  type: ActionTypes.SET_ROCKECTS,
+  payload: rockects,
+});
+export default setRockect;
