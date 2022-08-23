@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import ActionTypes from '../missions/ActionTypes';
+import ActionTypes from './ActionTypes';
 
-const initialState = {
-  rocket: {
+const initialState = [
+  {
     id: 1,
     title: 'Oyinlade',
     category: 'programmer',
   },
-};
-const rocketReducer = (state, { type, payload }) => {
+];
+const rocketReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_ROCKECTS:
       return state;
