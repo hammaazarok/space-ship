@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="profile"
+>
+  <div
+    className="profile-missions"
+  >
+    <h2>
+      My Missions
+    </h2>
+    <div
+      className="list-group"
+      onKeyDown={[Function]}
+    />
+  </div>
+  <div
+    className="profile-rockets"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <div
+      className="list-group"
+      onKeyDown={[Function]}
+    />
+  </div>
+</div>
+`;

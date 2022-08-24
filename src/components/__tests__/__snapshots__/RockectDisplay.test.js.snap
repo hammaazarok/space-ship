@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="rocketImage"
+    >
+      <img
+        alt=""
+        src={Array []}
+      />
+    </div>
+    <div
+      className="rocketDescription"
+    >
+      <h1>
+        rockect.rocket_name
+      </h1>
+      <p>
+        rockect.description
+      </p>
+      <button
+        className="btn btn-reserve width-20vw btn btn-primary"
+        disabled={false}
+        id={0}
+        onClick={[Function]}
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+</div>
+`;
