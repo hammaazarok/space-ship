@@ -1,5 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './RockectDisplay.css';
@@ -54,6 +52,7 @@ const RockectDisplay = ({
 RockectDisplay.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   img: PropTypes.array.isRequired,
   id: PropTypes.number.isRequired,
   reserved: PropTypes.bool,
