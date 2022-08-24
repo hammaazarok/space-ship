@@ -14,14 +14,6 @@ const Rockect = () => {
         console.log('Err', err);
       });
     dispatch(setRockect(response.data));
-    const resRead = await response.json();
-    const rockects = resRead.rockect.map((rockect) => ({
-      id: rockect.id,
-      name: rockect.rockect_name,
-      description: rockect.description,
-      img: rockect.flickr_images[0],
-      reserved: false,
-    }));
     return rockects;
   };
 
