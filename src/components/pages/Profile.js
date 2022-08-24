@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const Profile = () => {
   const { missions } = useSelector((state) => state.missions);
-  const Missions = missions;
+  const Missions = missions.filter((m) => m.isMember);
   return (
     <>
       <div className="profile">
@@ -12,9 +12,8 @@ const Profile = () => {
           <h2>My Missions</h2>
           <ListGroup>
             {Missions.map(((m) => (
-              m.isMember && (
-              <ListGroup.Item key={m.mission_id}>{m.mission_name}</ListGroup.Item>
-              ))))}
+              <ListGroup.Item key={m.mission}>{m.mission_name}</ListGroup.Item>
+            )))}
           </ListGroup>
         </div>
         <div className="profile-rockets">
