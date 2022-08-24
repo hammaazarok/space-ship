@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile {
+  display: flex;
+  gap: 10%;
+  margin: 0 5%;
+}
+
+.profile-missions {
+  width: 50%;
+}
+
+.profile-rockets {
+  width: 50%;
+}

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="nav"
+>
+  <div
+    className="left-nav"
+  >
+    <img
+      alt="space"
+      className="logo"
+      src="planet2.png"
+    />
+    <h1>
+      Space Traveler's Hub
+    </h1>
+  </div>
+  <div
+    className="right-nav"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#00d7c6",
+          "textDecoration": "underline",
+        }
+      }
+    >
+      Rockets
+    </a>
+    <a
+      className=""
+      href="/missions"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "RGB(246, 141, 54)",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Missions
+    </a>
+    <a
+      className=""
+      href="/Profile"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "RGB(246, 141, 54)",
+          "textDecoration": "none",
+        }
+      }
+    >
+      My profile
+    </a>
+  </div>
+</div>
+`;

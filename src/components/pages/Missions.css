@@ -1,0 +1,20 @@
+.missions-table {
+  margin: 0;
+  text-align: start;
+}
+
+.desc {
+  width: 50%;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.td-button {
+  text-align: center;
+}
+
+.table-container {
+  margin: 0 2%;
+}
