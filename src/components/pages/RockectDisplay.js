@@ -1,29 +1,65 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable camelcase */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import './RockectDisplay.css';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
-const RockectDisplay = () => {
-  const rockects = useSelector((state) => state.rockects);
-
-  const renderRockect = rockects.map((rockect) => (
-    <div key={rockect.id} className="main">
+const RockectDisplay = ({
+  name, description, img, id, reserved, bookingHandler,
+}) => (
+  <div className="container">
+    <div className="main">
       <div className="rocketImage">
-        <img src={rockect.flickr_images} alt={rockect.rocket_name} />
+        <img src={img} alt="" />
       </div>
       <div className="rocketDescription">
-        <h1>{rockect.rocket_name}</h1>
+        <h1>{name}</h1>
         <p>
-          {rockect.description}
+          {reserved ? (
+            <>
+              <Badge bg="primary">Reserved</Badge>
+              <span> </span>
+            </>
+          ) : (
+            <></>
+          )}
+          {description}
         </p>
-        <button type="button">Reserved</button>
+        {reserved ? (
+          <Button
+            variant="primary"
+            className="btn btn-cancel-reserve width-20vw back-color-gray"
+            onClick={() => bookingHandler(id)}
+            id={id}
+          >
+            Cancel Reservation
+          </Button>
+        ) : (
+          <Button
+            variant="primary"
+            className="btn btn-reserve width-20vw"
+            onClick={() => bookingHandler(id)}
+            id={id}
+          >
+            Reserve Rocket
+          </Button>
+        )}
       </div>
     </div>
-  ));
+  </div>
+);
 
-  return (
-    <>{ renderRockect }</>
-  );
+RockectDisplay.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
+  reserved: PropTypes.bool,
+  bookingHandler: PropTypes.func.isRequired,
 };
-
+RockectDisplay.defaultProps = {
+  reserved: false,
+};
 export default RockectDisplay;
