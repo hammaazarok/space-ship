@@ -10,3 +10,11 @@
 td {
   vertical-align: middle;
 }
+
+.td-button {
+  text-align: center;
+}
+
+.table-container {
+  margin: 0 2%;
+}
