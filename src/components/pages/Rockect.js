@@ -40,9 +40,9 @@ const Rockect = () => {
             key={rockect.id}
             id={rockect.id}
             reserved={rockect.reserved}
-            name={rockect.name}
+            name={rockect.rocket_name}
             description={rockect.description}
-            img={rockect.img}
+            img={rockect.flickr_images}
             bookingHandler={bookingHandler}
           />
         ))}

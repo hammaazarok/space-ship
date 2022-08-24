@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -53,9 +54,12 @@ const RockectDisplay = ({
 RockectDisplay.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.array.isRequired,
   id: PropTypes.number.isRequired,
-  reserved: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool,
   bookingHandler: PropTypes.func.isRequired,
+};
+RockectDisplay.defaultProps = {
+  reserved: false,
 };
 export default RockectDisplay;

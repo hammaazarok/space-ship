@@ -31,9 +31,12 @@ const Nav = () => (
     <div className="right-nav">
       {links.map((link) => (
         <NavLink
-          className={(navlink) => (navlink.isActive ? 'active-nav' : '')}
-          to={link.path}
           key={link.id}
+          to={link.path}
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : 'none',
+            color: isActive ? '#00d7c6' : 'RGB(246, 141, 54)',
+          })}
         >
           {link.text}
         </NavLink>

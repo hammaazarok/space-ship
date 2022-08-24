@@ -12,10 +12,10 @@
 
 .left-nav {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
-.left-nav h1{
+.left-nav h1 {
   font-size: 2vw;
   font-weight: bolder;
   color: gray;
@@ -31,14 +31,9 @@
   border-left: 2px solid grey;
 }
 
-.right-nav  a {
+.right-nav a {
   text-decoration: none;
   font-size: 2vw;
-}
-
-.active-nav {
-  color: #00d7c6;
-  text-decoration: underline;
 }
 
 @media only screen and (max-width: 540px) {
@@ -53,12 +48,12 @@
     height: 8vw;
     padding-right: 0.5vw;
   }
-  
-  .left-nav h1{
+
+  .left-nav h1 {
     font-size: 3vw;
   }
 
-  .right-nav  a {
+  .right-nav a {
     text-decoration: none;
     font-size: 3.3vw;
     gap: 0.3rem;

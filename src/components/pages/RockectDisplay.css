@@ -4,7 +4,7 @@
   margin: 2vw;
 }
 
-.container{
+.container {
   border-top: solid 1px lightgray;
 }
 
@@ -27,7 +27,6 @@
   color: #fff;
   border-radius: 0.3rem;
 } */
-
 
 @media only screen and (max-width: 540px) {
   .main {
