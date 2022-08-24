@@ -26,17 +26,15 @@ const Missions = () => {
   };
   const dispatch = useDispatch();
   useEffect(() => { fetchMissions().then((res) => dispatch(LoadMessions(res))); }, []);
-  const { error, loading, missions } = useSelector((state) => state.missions);
+  const { missions } = useSelector((state) => state.missions);
   const Missions = missions;
 
-  console.log(error, loading, Missions);
   const toggleMember = (id) => {
-    console.log(id);
     dispatch(addremoveMembertoMission(id));
   };
   return (
     <div className="table-container">
-      <Table striped bordered hover size="sm" className="missions-table ml-5">
+      <Table striped bordered hover size="sm" className="missions-table ml-5 table-responsive">
         <thead>
           <tr>
             <th>Mission</th>
