@@ -22,7 +22,7 @@ const Profile = () => {
           <h2>My Rockets</h2>
           <ListGroup>
             {Rockects.map(((rock) => (
-              <ListGroup.Item key={rock.rockects}>{rock.rocket_name}</ListGroup.Item>
+              <ListGroup.Item key={rock.rockects.id}>{rock.rocket_name}</ListGroup.Item>
             )))}
           </ListGroup>
         </div>
