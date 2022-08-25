@@ -10,8 +10,7 @@ const Rockect = () => {
   const fetchRockects = async () => {
     const response = await axios
       .get('https://api.spacexdata.com/v3/rockets')
-      .catch((err) => {
-        console.log('Err', err);
+      .catch(() => {
       });
     dispatch(setRockect(response.data));
     return rockects;

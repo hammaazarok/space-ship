@@ -31,7 +31,7 @@
 
 ## Live Demo
 
-- [Live Demo Link]()
+- [Live Demo Link](https://space-ship-ha-on.netlify.app)
 
 ## Getting Started
 
@@ -79,9 +79,8 @@ Type this command into the terminal:
 
 👤 **Hamma Azarok**
 
-- GitHub: []()
-- Twitter: []()
-- LinkedIn: []()
+- GitHub: [@hammaazarok](https://github.com/hammaazarok)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hammaazarok/)
 
 ## 🤝 Contributing
 
