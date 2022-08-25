@@ -52,8 +52,7 @@ const RockectDisplay = ({
 RockectDisplay.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  img: PropTypes.array.isRequired,
+  img: PropTypes.arrayOf(PropTypes.string).isRequired,
   id: PropTypes.number.isRequired,
   reserved: PropTypes.bool,
   bookingHandler: PropTypes.func.isRequired,

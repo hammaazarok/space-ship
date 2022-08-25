@@ -16,6 +16,8 @@
 - HTML
 - CSS
 - Javascript
+
+## Dev Dependencies
 - node-modules
 - lighthouse
 - hintweb
@@ -24,6 +26,8 @@
 - webpack
 - web server
 - plugins for HTML and CSS
+
+
 
 ## Live Demo
 
